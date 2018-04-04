@@ -1,5 +1,7 @@
 # Flask-Prelaunchr
-Originally inspired by [Harrys Tech Prelaunchr](https://github.com/harrystech/prelaunchr). Flask-Prelaunchr is a Flask application for starting a viral prelaunch campaign for new companies or products. The campaign is conducive to social sharing and has prize levels based on the number of people each person refers. By default, this includes an HTML/CSS for template based on [Bulma](http://bulma.io)  and the original campaign email template to give you a better idea of how this looked when actually running.   
+Originally inspired by [Harrys Tech Prelaunchr](https://github.com/harrystech/prelaunchr). Flask-Prelaunchr is a Flask application for starting a viral prelaunch campaign for new companies or products. This application helps create a buzz around your brand with a prelaunch campaign. The prelaunch campaign will helped us gather legitimate email addresses to whom we could announce your launch.
+
+The campaign is conducive to social sharing and has prize levels based on the number of people each person refers. By default, this includes an HTML/CSS for template based on [Bulma](http://bulma.io) and the original campaign email template.   
 
 ## How it works
 Flask-Prelaunchr has a main mechanic from which everything else is derived: Every User is given a unique referral_code which is how the application knows who referred a signing up user. Based on the amount of referrals a User has brought to the site, they are put into a different "prize group". The groups, amounts, and prizes are completely up to you to set.
