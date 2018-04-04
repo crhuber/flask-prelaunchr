@@ -1,0 +1,6 @@
+venv
+*.pyc
+data-dev.sqlite
+*.sqlite
+*.env
+mysql.env

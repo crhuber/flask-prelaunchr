@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  prelaunchr:
+    image: crhuber/flask-prelaunchr:latest
+    ports:
+      - 5000:5000
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - FLASK_APP=manage.py
+      - FLASK_CONFIG=production

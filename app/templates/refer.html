@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+{% block title %} Refer {% endblock %}
+
+{% block page_content %}
+
+<section class="hero is-info">
+    <div class="hero-head">
+    </div>
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <h1 class="title">
+          INVITE FRIENDS & EARN PRODUCT
+        </h1>
+        <h2 class="subtitle">
+					Share your unique link via email, Facebook or Twitter and earn Harry's goods for each friend who signs up.
+				</h2>
+				<p>
+					Your unique link
+				</p>
+				<a class="button" href="{{ url_for('main.new_referral', referral_code=referral_code, _external=True)}}">
+						<span>{{ url_for('main.new_referral', referral_code=referral_code, _external=True)}}</span>
+				</a>
+				<a class="button">
+						<span class="icon is-small">
+							<i class="fa fa-facebook"></i>
+						</span>
+				</a>
+				<a class="button">
+						<span class="icon is-small">
+							<i class="fa fa-twitter"></i>
+						</span>
+				</a>
+      </div>
+    </div>
+
+</section>
+
+<div class="box cta">
+	<p class="has-text-centered">
+			HERE'S HOW IT WORKS
+	</p>
+</div>
+
+<section class="container has-text-centered">
+	<div class="columns">
+			<div class="column">
+				FRIENDS JOINED
+			</div>
+			<div class="column">
+				5
+			</div>
+			<div class="column">
+				10
+			</div>
+			<div class="column">
+				25
+			</div>
+			<div class="column">
+				50
+			</div>
+	</div>
+	<progress class="progress" value="{{referrals}}" max="50">{{referrals}}/50</progress>
+	<div class="columns">
+			<div class="column">
+				Harry's Product
+			</div>
+			<div class="column">
+				Shave Cream
+			</div>
+			<div class="column">
+				Truman Handle w/ Blade
+			</div>
+			<div class="column">
+				Winston Shave Set
+			</div>
+			<div class="column">
+				One Year Free Blades
+			</div>
+	</div>
+		
+	<h3 class="title">
+			{% if referrals == 0 %}
+			<p><span>No</span> friends have joined...Yet!</p>
+			{% elif referrals == 1 %}
+			<p><span>{{referrals}}</span> friend joined</p>
+			{% else %}
+			<p><span>{{referrals}}</span> friends joined</p>
+			{% endif %}
+	</h3>
+
+
+	<p>Keep checking</p>
+
+</section>  
+
+{% endblock %}

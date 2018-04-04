@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %} Sign Up {% endblock %}
+
+{% block page_content %}
+  <section class="hero is-info is-fullheight">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <div class="column is-6 is-offset-3">
+          <h1 class="title">
+            Be The First To Know
+          </h1>
+          <h2 class="subtitle">
+            Respecting The Face and Wallet Since Like...Right Now
+          </h2>
+          <div class="box">
+            <form method="POST" action="{{ url_for('main.sign_up')}}">
+              {{ form.csrf_token }}
+              <div class="field is-grouped">
+                <p class="control is-expanded">
+                  {{ form.email(class="input", type="email", placeholder="Enter Email") }}
+                </p>
+                <p class="control">
+                    {{form.submit(class="button is-info")}}
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+{% endblock %}
